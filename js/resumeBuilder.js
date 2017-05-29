@@ -73,7 +73,8 @@ var education = {
 			majors: [
 				'law'
 			],
-			dates: '2007-2009'
+			dates: '2007-2009',
+			url: 'http://www.une.edu.au/'
 		},
 		{
 			name: 'University of New South Wales',
@@ -82,7 +83,8 @@ var education = {
 			majors: [
 				'psychology'
 			],
-			dates: '1998-2002'
+			dates: '1998-2002',
+			url: 'https://www.unsw.edu.au/'
 		},
 		{
 			name: 'University of New South Wales',
@@ -91,7 +93,8 @@ var education = {
 			majors: [
 				'psychology'
 			],
-			dates: '1993-1996'
+			dates: '1993-1996',
+			url: 'https://www.unsw.edu.au/'
 		}
 	],
 	onlineCourses: [
