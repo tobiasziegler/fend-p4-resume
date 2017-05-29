@@ -194,8 +194,35 @@ var projects = {
 			]
 		}
 	],
+
+	/**
+	* @description Inserts content into the relevant HTML template
+	* @param {string} template - The HTML template (see helper.js)
+	* @param {string} content - The content to insert in place of the template's %data%
+	* @returns {string} HTML-formatted content
+	*/
+	format: function(template, content) {
+		var output = template.replace('%data%', content);
+		return output;
+	},
+
+	/**
+	* @description Publishes all of the content about projects to the page
+	*/
 	display: function() {
-		
+		projects.projects.forEach(function(project) {
+			$('#projects').append(HTMLprojectStart);
+
+			$('.project-entry:last').append(projects.format(HTMLprojectTitle, project.title));
+			$('.project-entry:last').append(projects.format(HTMLprojectDates, project.dates));
+			$('.project-entry:last').append(projects.format(HTMLprojectDescription, project.description));
+
+			if (project.images.length > 0) {
+				project.images.forEach(function(image) {
+					$('.project-entry:last').append(projects.format(HTMLprojectImage, image));
+				});
+			}
+		});
 	}
 };
 
@@ -317,4 +344,5 @@ var education = {
 
 bio.display();
 work.display();
+projects.display();
 education.display();
