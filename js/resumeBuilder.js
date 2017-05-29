@@ -142,7 +142,8 @@ var projects = {
 			'it in line with a supplied mockup.',
 			images: [
 				'images/animal-trading-cards.jpg'
-			]
+			],
+			url: 'https://github.com/tobiasziegler/fend-p2-animal-trading-cards'
 		},
 		{
 			title: 'Mockup to Article',
@@ -151,7 +152,8 @@ var projects = {
 			'HTML5 to create a web page that matched the supplied mockup.',
 			images: [
 				'images/mockup-to-article.jpg'
-			]
+			],
+			url: 'https://github.com/tobiasziegler/fend-p1-mockup-to-article'
 		},
 		{
 			title: 'OCC Bin Check-In',
@@ -162,7 +164,8 @@ var projects = {
 			'needs.',
 			images: [
 				'images/occ-bin-check-in.jpg'
-			]
+			],
+			url: 'https://generalassemb.ly/education/user-experience-design'
 		},
 		{
 			title: 'Saving Our Forests',
@@ -171,7 +174,8 @@ var projects = {
 			'information architecture, and produced content.',
 			images: [
 				'images/saving-our-forests.jpg'
-			]
+			],
+			url: 'http://savingourforests.org.au/'
 		},
 		{
 			title: 'Climate Action NSW',
@@ -181,7 +185,8 @@ var projects = {
 			'meet campaign objectives.',
 			images: [
 				'images/climate-action-nsw.jpg'
-			]
+			],
+			url: 'http://climateactionnsw.org.au/'
 		},
 		{
 			title: 'Fund Our Libraries',
@@ -191,7 +196,8 @@ var projects = {
 			'functionality to meet the campaign objectives.',
 			images: [
 				'images/fund-our-libraries.jpg'
-			]
+			],
+			url: 'http://fundourlibraries.org.au/'
 		}
 	],
 
