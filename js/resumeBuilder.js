@@ -64,4 +64,53 @@ var bio = {
 	}
 };
 
+var education = {
+	schools: [
+		{
+			name: 'University of New England',
+			location: 'Armidale, NSW, Australia',
+			degree: 'Graduate Diploma of Legal Studies',
+			majors: [
+				'law'
+			],
+			dates: '2007-2009'
+		},
+		{
+			name: 'University of New South Wales',
+			location: 'Sydney, NSW, Australia',
+			degree: 'Doctor of Philosophy',
+			majors: [
+				'psychology'
+			],
+			dates: '1998-2002'
+		},
+		{
+			name: 'University of New South Wales',
+			location: 'Sydney, NSW, Australia',
+			degree: 'Bachelor of Science (Psychology) (Honours)',
+			majors: [
+				'psychology'
+			],
+			dates: '1993-1996'
+		}
+	],
+	onlineCourses: [
+		{
+			title: 'Front-End Web Developer Nanodegree',
+			school: 'Udacity',
+			dates: '2017 (in progress)',
+			url: 'https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001'
+		},
+		{
+			title: 'User Experience Design',
+			school: 'General Assembly',
+			dates: '2017',
+			url: 'https://generalassemb.ly/education/user-experience-design'
+		}
+	],
+	display: function() {
+
+	}
+};
+
 bio.display();
