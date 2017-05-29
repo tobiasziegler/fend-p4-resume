@@ -220,6 +220,12 @@ var projects = {
 			project.images.forEach(function(image) {
 				$('.project-entry:last').append(projects.format(HTMLprojectImage, image));
 			});
+
+			if (project.url) {
+				// Select the link attached to the project title and assign the URL
+				var anchor = $('.project-entry:last').children('a');
+				anchor.attr('href', project.url);
+			}
 		});
 	}
 };
