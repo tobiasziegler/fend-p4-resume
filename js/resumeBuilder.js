@@ -10,10 +10,10 @@ var bio = {
 	},
 	welcomeMessage: 'I create digital experiences that delight users and meet your organisation\'s goals',
 	skills: [
-		'user experience design',
-		'web development',
-		'research and data analysis',
-		'content strategy'
+		'User Experience Design',
+		'Web Development (HTML5, CSS & JavaScript)',
+		'Research and Data Analysis',
+		'Content Strategy & Production'
 	],
 	biopic: 'images/tobby.png',
 
