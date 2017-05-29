@@ -31,6 +31,10 @@ var bio = {
 	/**
 	* @description Appends the resume's contact details to the specified selector
 	* @param {jQuery} selector - The element to append the contacts to
+	*
+	* TODO: Look for a way to iterate through all of the properties inside the
+	* bio.contacts object -- it would need to match the expected items, but
+	* would also need to handle any additional contacts (e.g., LinkedIn).
 	*/
 	displayContacts: function(selector) {
 		selector.append(bio.format(HTMLmobile, bio.contacts.mobile));
@@ -53,6 +57,7 @@ var bio = {
 		$('#header').append(bio.format(HTMLwelcomeMsg, bio.welcomeMessage));
 
 		if (bio.skills.length > 0) {
+			// #skills section will only be inserted if the array isn't empty
 			$('#header').append(HTMLskillsStart);
 
 			bio.skills.forEach(function(skill) {
@@ -131,6 +136,7 @@ var education = {
 			education.schools.forEach(function(school) {
 				$('#education').append(HTMLschoolStart);
 
+				// School name and degree join together to form one DOM element
 				$('.education-entry:last').append(
 					education.format(HTMLschoolName, school.name) +
 					education.format(HTMLschoolDegree, school.degree)
@@ -139,12 +145,15 @@ var education = {
 				$('.education-entry:last').append(education.format(HTMLschoolDates, school.dates));
 				$('.education-entry:last').append(education.format(HTMLschoolLocation, school.location));
 
+				// Don't display the 'Majors:' line if the array is empty
 				if (school.majors.length > 0) {
+					// Handle multiple majors by joining them to form a single string
 					var majorsString = school.majors.join('; ');
 					$('.education-entry:last').append(education.format(HTMLschoolMajor, majorsString));
 				}
 
 				if (school.url) {
+					// Select the link attached to the school name and degree and assign the URL
 					var anchor = $('.education-entry:last').children('a');
 					anchor.attr('href', school.url);
 				}
@@ -152,11 +161,13 @@ var education = {
 		}
 
 		if (education.onlineCourses.length > 0) {
+			// Online Classes heading won't appear if the onlineCourses object is empty
 			$('#education').append(HTMLonlineClasses);
 
 			education.onlineCourses.forEach(function(course) {
 				$('#education').append(HTMLschoolStart);
 
+				// Course title and school join together to form one DOM element
 				$('.education-entry:last').append(
 					education.format(HTMLonlineTitle, course.title) +
 					education.format(HTMLonlineSchool, course.school)
@@ -164,7 +175,9 @@ var education = {
 
 				$('.education-entry:last').append(education.format(HTMLonlineDates, course.dates));
 
+				// Insert the URL as text into the page
 				$('.education-entry:last').append(education.format(HTMLonlineURL, course.url));
+				// Select the URL text that was inserted and assign the link
 				var anchor = $('.education-entry:last').children('a');
 				anchor.attr('href', course.url);
 			});
