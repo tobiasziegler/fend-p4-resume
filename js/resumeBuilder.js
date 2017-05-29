@@ -150,6 +150,25 @@ var education = {
 				}
 			});
 		}
+
+		if (education.onlineCourses.length > 0) {
+			$('#education').append(HTMLonlineClasses);
+
+			education.onlineCourses.forEach(function(course) {
+				$('#education').append(HTMLschoolStart);
+
+				$('.education-entry:last').append(
+					education.format(HTMLonlineTitle, course.title) +
+					education.format(HTMLonlineSchool, course.school)
+				);
+
+				$('.education-entry:last').append(education.format(HTMLonlineDates, course.dates));
+
+				$('.education-entry:last').append(education.format(HTMLonlineURL, course.url));
+				var anchor = $('.education-entry:last').children('a');
+				anchor.attr('href', course.url);
+			});
+		}
 	}
 };
 
