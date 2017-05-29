@@ -16,10 +16,22 @@ var bio = {
 		'content strategy'
 	],
 	biopic: 'images/tobby.png',
+
+	/**
+	* @description Inserts content into the relevant HTML template
+	* @param {string} template - The HTML template (see helper.js)
+	* @param {string} content - The content to insert in place of the template's %data%
+	* @returns {string} HTML-formatted content
+	*/
 	format: function(template, content) {
 		var output = template.replace('%data%', content);
 		return output;
 	},
+
+	/**
+	* @description Appends the resume's contact details to the specified selector
+	* @param {jQuery} selector - The element to append the contacts to
+	*/
 	displayContacts: function(selector) {
 		selector.append(bio.format(HTMLmobile, bio.contacts.mobile));
 		selector.append(bio.format(HTMLemail, bio.contacts.email));
@@ -27,6 +39,10 @@ var bio = {
 		selector.append(bio.format(HTMLtwitter, bio.contacts.twitter));
 		selector.append(bio.format(HTMLlocation, bio.contacts.location));
 	},
+
+	/**
+	* @description Publishes all of the bio content to the page
+	*/
 	display: function() {
 		$("#header").prepend(bio.format(HTMLheaderRole, bio.role));
 		$("#header").prepend(bio.format(HTMLheaderName, bio.name));
@@ -43,7 +59,7 @@ var bio = {
 				$("#skills").append(bio.format(HTMLskills, skill));
 			});
 		}
-		
+
 		bio.displayContacts($("#footerContacts"));
 	}
 };
