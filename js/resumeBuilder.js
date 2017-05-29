@@ -140,6 +140,11 @@ var education = {
 					var majorsString = school.majors.join('; ');
 					$('.education-entry:last').append(education.format(HTMLschoolMajor, majorsString));
 				}
+
+				if (school.url) {
+					var anchor = $('.education-entry:last').children('a');
+					anchor.attr('href', school.url);
+				}
 			});
 		}
 	}
