@@ -100,8 +100,35 @@ var work = {
 			'school administration and academic leadership.'
 		}
 	],
-	display: function() {
 
+	/**
+	* @description Inserts content into the relevant HTML template
+	* @param {string} template - The HTML template (see helper.js)
+	* @param {string} content - The content to insert in place of the template's %data%
+	* @returns {string} HTML-formatted content
+	*/
+	format: function(template, content) {
+		var output = template.replace('%data%', content);
+		return output;
+	},
+
+	/**
+	* @description Publishes all of the work experience content to the page
+	*/
+	display: function() {
+		work.jobs.forEach(function(job) {
+			$('#workExperience').append(HTMLworkStart);
+
+			// Employer and job title join together to form one DOM element
+			$('.work-entry:last').append(
+				work.format(HTMLworkEmployer, job.employer) +
+				work.format(HTMLworkTitle, job.title)
+			);
+
+			$('.work-entry:last').append(work.format(HTMLworkDates, job.dates));
+			$('.work-entry:last').append(work.format(HTMLworkLocation, job.location));
+			$('.work-entry:last').append(work.format(HTMLworkDescription, job.description));
+		});
 	}
 };
 
@@ -222,4 +249,5 @@ var education = {
 };
 
 bio.display();
+work.display();
 education.display();
