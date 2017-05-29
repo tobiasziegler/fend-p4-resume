@@ -44,23 +44,23 @@ var bio = {
 	* @description Publishes all of the bio content to the page
 	*/
 	display: function() {
-		$("#header").prepend(bio.format(HTMLheaderRole, bio.role));
-		$("#header").prepend(bio.format(HTMLheaderName, bio.name));
+		$('#header').prepend(bio.format(HTMLheaderRole, bio.role));
+		$('#header').prepend(bio.format(HTMLheaderName, bio.name));
 
-		bio.displayContacts($("#topContacts"));
+		bio.displayContacts($('#topContacts'));
 
-		$("#header").append(bio.format(HTMLbioPic, bio.biopic));
-		$("#header").append(bio.format(HTMLwelcomeMsg, bio.welcomeMessage));
+		$('#header').append(bio.format(HTMLbioPic, bio.biopic));
+		$('#header').append(bio.format(HTMLwelcomeMsg, bio.welcomeMessage));
 
 		if (bio.skills.length > 0) {
-			$("#header").append(HTMLskillsStart);
+			$('#header').append(HTMLskillsStart);
 
 			bio.skills.forEach(function(skill) {
-				$("#skills").append(bio.format(HTMLskills, skill));
+				$('#skills').append(bio.format(HTMLskills, skill));
 			});
 		}
 
-		bio.displayContacts($("#footerContacts"));
+		bio.displayContacts($('#footerContacts'));
 	}
 };
 
