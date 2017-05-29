@@ -217,11 +217,9 @@ var projects = {
 			$('.project-entry:last').append(projects.format(HTMLprojectDates, project.dates));
 			$('.project-entry:last').append(projects.format(HTMLprojectDescription, project.description));
 
-			if (project.images.length > 0) {
-				project.images.forEach(function(image) {
-					$('.project-entry:last').append(projects.format(HTMLprojectImage, image));
-				});
-			}
+			project.images.forEach(function(image) {
+				$('.project-entry:last').append(projects.format(HTMLprojectImage, image));
+			});
 		});
 	}
 };
@@ -289,36 +287,34 @@ var education = {
 	* @description Publishes all of the education content to the page
 	*/
 	display: function() {
-		if (education.schools.length > 0) {
-			education.schools.forEach(function(school) {
-				$('#education').append(HTMLschoolStart);
+		education.schools.forEach(function(school) {
+			$('#education').append(HTMLschoolStart);
 
-				// School name and degree join together to form one DOM element
-				$('.education-entry:last').append(
-					education.format(HTMLschoolName, school.name) +
-					education.format(HTMLschoolDegree, school.degree)
-				);
+			// School name and degree join together to form one DOM element
+			$('.education-entry:last').append(
+				education.format(HTMLschoolName, school.name) +
+				education.format(HTMLschoolDegree, school.degree)
+			);
 
-				$('.education-entry:last').append(education.format(HTMLschoolDates, school.dates));
-				$('.education-entry:last').append(education.format(HTMLschoolLocation, school.location));
+			$('.education-entry:last').append(education.format(HTMLschoolDates, school.dates));
+			$('.education-entry:last').append(education.format(HTMLschoolLocation, school.location));
 
-				// Don't display the 'Majors:' line if the array is empty
-				if (school.majors.length > 0) {
-					// Handle multiple majors by joining them to form a single string
-					var majorsString = school.majors.join('; ');
-					$('.education-entry:last').append(education.format(HTMLschoolMajor, majorsString));
-				}
+			// Don't display the 'Majors:' line if the array is empty
+			if (school.majors.length > 0) {
+				// Handle multiple majors by joining them to form a single string
+				var majorsString = school.majors.join('; ');
+				$('.education-entry:last').append(education.format(HTMLschoolMajor, majorsString));
+			}
 
-				if (school.url) {
-					// Select the link attached to the school name and degree and assign the URL
-					var anchor = $('.education-entry:last').children('a');
-					anchor.attr('href', school.url);
-				}
-			});
-		}
+			if (school.url) {
+				// Select the link attached to the school name and degree and assign the URL
+				var anchor = $('.education-entry:last').children('a');
+				anchor.attr('href', school.url);
+			}
+		});
 
 		if (education.onlineCourses.length > 0) {
-			// Online Classes heading won't appear if the onlineCourses object is empty
+			// Online Classes heading won't appear if the onlineCourses array is empty
 			$('#education').append(HTMLonlineClasses);
 
 			education.onlineCourses.forEach(function(course) {
