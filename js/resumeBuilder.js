@@ -132,6 +132,73 @@ var work = {
 	}
 };
 
+var projects = {
+	projects: [
+		{
+			title: 'Animal Trading Cards',
+			dates: '2017',
+			description: 'In this project for a web development course, I generated ' +
+			'content and used HTML5 and CSS to create a card-based layout to present ' +
+			'it in line with a supplied mockup.',
+			images: [
+				'images/animal-trading-cards.jpg'
+			]
+		},
+		{
+			title: 'Mockup to Article',
+			dates: '2017',
+			description: 'In this project for a web development course, I used ' +
+			'HTML5 to create a web page that matched the supplied mockup.',
+			images: [
+				'images/mockup-to-article.jpg'
+			]
+		},
+		{
+			title: 'OCC Bin Check-In',
+			dates: '2017',
+			description: 'In this project for a User Experience Design course, I ' +
+			'conducted interviews and other research, then developed and evaluated ' +
+			'low- and high-fidelity prototypes for a mobile website to address user ' +
+			'needs.',
+			images: [
+				'images/occ-bin-check-in.jpg'
+			]
+		},
+		{
+			title: 'Saving Our Forests',
+			dates: '2016-2017',
+			description: 'I developed a WordPress child theme, established the ' +
+			'information architecture, and produced content.',
+			images: [
+				'images/saving-our-forests.jpg'
+			]
+		},
+		{
+			title: 'Climate Action NSW',
+			dates: '2015-2016',
+			description: 'I developed a WordPress child theme, established the ' +
+			'information architecture, and produced content and functionality to ' +
+			'meet campaign objectives.',
+			images: [
+				'images/climate-action-nsw.jpg'
+			]
+		},
+		{
+			title: 'Fund Our Libraries',
+			dates: '2014-2015',
+			description: 'I implemented a WordPress child-parent theme combination, ' +
+			'established the information architecture, and produced content and ' +
+			'functionality to meet the campaign objectives.',
+			images: [
+				'images/fund-our-libraries.jpg'
+			]
+		}
+	],
+	display: function() {
+		
+	}
+};
+
 var education = {
 	schools: [
 		{
