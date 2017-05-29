@@ -108,9 +108,42 @@ var education = {
 			url: 'https://generalassemb.ly/education/user-experience-design'
 		}
 	],
-	display: function() {
 
+	/**
+	* @description Inserts content into the relevant HTML template
+	* @param {string} template - The HTML template (see helper.js)
+	* @param {string} content - The content to insert in place of the template's %data%
+	* @returns {string} HTML-formatted content
+	*/
+	format: function(template, content) {
+		var output = template.replace('%data%', content);
+		return output;
+	},
+
+	/**
+	* @description Publishes all of the education content to the page
+	*/
+	display: function() {
+		if (education.schools.length > 0) {
+			education.schools.forEach(function(school) {
+				$('#education').append(HTMLschoolStart);
+
+				$('.education-entry:last').append(
+					education.format(HTMLschoolName, school.name) +
+					education.format(HTMLschoolDegree, school.degree)
+				);
+
+				$('.education-entry:last').append(education.format(HTMLschoolDates, school.dates));
+				$('.education-entry:last').append(education.format(HTMLschoolLocation, school.location));
+
+				if (school.majors.length > 0) {
+					var majorsString = school.majors.join(';');
+					$('.education-entry:last').append(education.format(HTMLschoolMajor, majorsString));
+				}
+			});
+		}
 	}
 };
 
 bio.display();
+education.display();
