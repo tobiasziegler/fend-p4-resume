@@ -137,7 +137,7 @@ var education = {
 				$('.education-entry:last').append(education.format(HTMLschoolLocation, school.location));
 
 				if (school.majors.length > 0) {
-					var majorsString = school.majors.join(';');
+					var majorsString = school.majors.join('; ');
 					$('.education-entry:last').append(education.format(HTMLschoolMajor, majorsString));
 				}
 			});
