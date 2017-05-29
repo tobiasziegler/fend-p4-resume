@@ -108,7 +108,7 @@ a {
 
 .welcome-message {
   font-style: italic;
-  font-size: 18px;
+  font-size: 21px;
   color: #f3f3f3;
   line-height: 28px;
 }
@@ -197,6 +197,10 @@ span {
 
 .center-text {
     color: #fff;
+}
+
+#topContacts {
+  margin-bottom: 1em;
 }
 
 /* Media queries to handle various device widths */
