@@ -69,6 +69,42 @@ var bio = {
 	}
 };
 
+var work = {
+	jobs: [
+		{
+			employer: 'Jan Barham MLC, Parliament of NSW',
+			title: 'Policy and Legislation Advisor',
+			location: 'Sydney, NSW, Australia',
+			dates: '2012-2017',
+			description: 'Policy research and analysis, stakeholder consultation, ' +
+			'creating and production of content for digital, print and media ' +
+			'campaigns, and writing speeches, articles and public communications.'
+		},
+		{
+			employer: 'Charles Sturt University',
+			title: 'Senior Lecturer in Psychology',
+			location: 'Bathurst, NSW, Australia',
+			dates: '2006-2012',
+			description: 'Conducted and supervised experimental, survey and diary ' +
+			'research. Coordinated fourth-year courses, implemented an online ' +
+			'research participation system, and delivered workshops on advanced ' +
+			'topics in research.'
+		},
+		{
+			employer: 'Charles Sturt University',
+			title: 'Lecturer in Psychology',
+			location: 'Bathurst, NSW, Australia',
+			dates: '2002-2005',
+			description: 'Conducted and supervised survey and experimental research, ' +
+			'taught on-campus and distance education subjects, and contributed to ' +
+			'school administration and academic leadership.'
+		}
+	],
+	display: function() {
+
+	}
+};
+
 var education = {
 	schools: [
 		{
