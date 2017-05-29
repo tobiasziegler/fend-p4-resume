@@ -20,19 +20,19 @@ var bio = {
 		var output = template.replace('%data%', content);
 		return output;
 	},
+	displayContacts: function(selector) {
+		selector.append(bio.format(HTMLmobile, bio.contacts.mobile));
+		selector.append(bio.format(HTMLemail, bio.contacts.email));
+		selector.append(bio.format(HTMLgithub, bio.contacts.github));
+		selector.append(bio.format(HTMLtwitter, bio.contacts.twitter));
+		selector.append(bio.format(HTMLlocation, bio.contacts.location));
+	},
 	display: function() {
 		$("#header").prepend(bio.format(HTMLheaderRole, bio.role));
 		$("#header").prepend(bio.format(HTMLheaderName, bio.name));
-		$("#topContacts").append(bio.format(HTMLmobile, bio.contacts.mobile));
-		$("#topContacts").append(bio.format(HTMLemail, bio.contacts.email));
-		$("#topContacts").append(bio.format(HTMLgithub, bio.contacts.github));
-		$("#topContacts").append(bio.format(HTMLtwitter, bio.contacts.twitter));
-		$("#topContacts").append(bio.format(HTMLlocation, bio.contacts.location));
-		$("#footerContacts").append(bio.format(HTMLmobile, bio.contacts.mobile));
-		$("#footerContacts").append(bio.format(HTMLemail, bio.contacts.email));
-		$("#footerContacts").append(bio.format(HTMLgithub, bio.contacts.github));
-		$("#footerContacts").append(bio.format(HTMLtwitter, bio.contacts.twitter));
-		$("#footerContacts").append(bio.format(HTMLlocation, bio.contacts.location));
+
+		bio.displayContacts($("#topContacts"));
+
 		$("#header").append(bio.format(HTMLbioPic, bio.biopic));
 		$("#header").append(bio.format(HTMLwelcomeMsg, bio.welcomeMessage));
 
@@ -43,6 +43,8 @@ var bio = {
 				$("#skills").append(bio.format(HTMLskills, skill));
 			});
 		}
+		
+		bio.displayContacts($("#footerContacts"));
 	}
 };
 
