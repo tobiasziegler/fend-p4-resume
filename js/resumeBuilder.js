@@ -35,11 +35,14 @@ var bio = {
 		$("#footerContacts").append(bio.format(HTMLlocation, bio.contacts.location));
 		$("#header").append(bio.format(HTMLbioPic, bio.biopic));
 		$("#header").append(bio.format(HTMLwelcomeMsg, bio.welcomeMessage));
-		$("#header").append(HTMLskillsStart);
-		$("#skills").append(bio.format(HTMLskills, bio.skills[0]));
-		$("#skills").append(bio.format(HTMLskills, bio.skills[1]));
-		$("#skills").append(bio.format(HTMLskills, bio.skills[2]));
-		$("#skills").append(bio.format(HTMLskills, bio.skills[3]));
+
+		if (bio.skills.length > 0) {
+			$("#header").append(HTMLskillsStart);
+
+			bio.skills.forEach(function(skill) {
+				$("#skills").append(bio.format(HTMLskills, skill));
+			});
+		}
 	}
 };
 
