@@ -9,9 +9,11 @@ h3,
 h4,
 h5,
 h6 {
-  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;box-sizing: border-box;  padding: 0;
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Muli", sans-serif;
 }
 
 .clear-fix {
@@ -26,7 +28,9 @@ h6 {
 
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  font-weight: 200;
+  color: #02b3e4;
+  text-transform: uppercase;
   line-height: 48px;
   display: inline;
 }
@@ -34,7 +38,7 @@ h1 {
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: #999;
+  color: #7d97ad;
   line-height: 29px;
   padding: 10px;
 }
@@ -42,8 +46,9 @@ h2 {
 h3 {
   font-style: italic;
   font-size: 20px;
-  color: #000;
+  color: #2d3c49;
   line-height: 22px;
+  margin-top: 20px;
 }
 
 h4 {
@@ -100,16 +105,16 @@ a {
 }
 
 #skills-h3 {
-  color: #f5ae23;
+  color: #02b3e4;
   display: none;
 }
 
 .orange {
-  background-color: #f5ae23;
+  background-color: #02b3e4;
 }
 
 .orange-text {
-  color: #f5ae23;
+  color: #02b3e4;
 }
 
 .white-text {
@@ -129,7 +134,7 @@ a {
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #2d3c49;
 }
 
 .flex-box {
@@ -164,6 +169,7 @@ ul {
 }
 
 img {
+  max-width: 100%;
   padding: 10px;
 }
 
@@ -173,6 +179,15 @@ span {
 
 #lets-connect {
   text-align: center;
+}
+
+#name+ span {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.center-text {
+    color: #fff;
 }
 
 /* Media queries to handle various device widths */
@@ -217,5 +232,23 @@ span {
   #skills-h3,
   .biopic {
     display: block;
+  }
+
+  #workExperience,
+  #projects,
+  #education {
+      display: flex;
+      flex-wrap: wrap;
+  }
+
+  .work-entry,
+  .project-entry,
+  .education-entry {
+      width: 50%;
+  }
+
+  h2,
+  h3 {
+      width: 100%;
   }
 }
