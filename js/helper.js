@@ -176,8 +176,14 @@ function initializeMap() {
     });
 
     // hmmmm, I wonder what this is about...
+    // This event listener activates when someone clicks on a map marker
     google.maps.event.addListener(marker, 'click', function() {
-      // your code goes here!
+      // Documentation on displaying an infoWindow:
+      // https://developers.google.com/maps/documentation/javascript/infowindows
+      //
+      // TODO: Is it possible to add the jobs/degrees that correspond to each
+      // location to the infoWindow content?
+      infoWindow.open(map, marker);
     });
 
     // this is where the pin actually gets added to the map.
