@@ -17,6 +17,7 @@
   "homepage": "https://github.com/tobiasziegler/fend-p4-resume#readme",
   "devDependencies": {
     "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-watch": "^1.0.0",
     "grunt-jsbeautifier": "^0.2.13"
   }
 }
