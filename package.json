@@ -1,0 +1,18 @@
+{
+  "name": "fend-p4-resume",
+  "version": "1.0.0",
+  "description": "Project 4 (Online Resume) for Udacity's Front-End Web Developer nanodegree",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tobiasziegler/fend-p4-resume.git"
+  },
+  "author": "David Mallard",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tobiasziegler/fend-p4-resume/issues"
+  },
+  "homepage": "https://github.com/tobiasziegler/fend-p4-resume#readme"
+}
