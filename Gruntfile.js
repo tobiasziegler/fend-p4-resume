@@ -20,12 +20,15 @@ module.exports = function(grunt) {
 			],
 			options: {
 				js: {
+					endWithNewline: true,
 					indentWithTabs: true
 				},
 				css: {
+					endWithNewline: true,
 					indentWithTabs: true
 				},
 				html: {
+					endWithNewline: true,
 					indentWithTabs: true
 				}
 			}
