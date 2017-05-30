@@ -12,6 +12,7 @@ module.exports = function(grunt) {
 		},
 		jsbeautifier: {
 			files: [
+				'Gruntfile.js',
 				'js/**/*.js',
 				'!js/jQuery.js',
 				'css/**/*.css',
