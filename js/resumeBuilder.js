@@ -18,24 +18,24 @@ var bio = {
 	biopic: 'images/tobby.png',
 
 	/**
-	* @description Inserts content into the relevant HTML template
-	* @param {string} template - The HTML template (see helper.js)
-	* @param {string} content - The content to insert in place of the template's %data%
-	* @returns {string} HTML-formatted content
-	*/
+	 * @description Inserts content into the relevant HTML template
+	 * @param {string} template - The HTML template (see helper.js)
+	 * @param {string} content - The content to insert in place of the template's %data%
+	 * @returns {string} HTML-formatted content
+	 */
 	format: function(template, content) {
 		var output = template.replace('%data%', content);
 		return output;
 	},
 
 	/**
-	* @description Appends the resume's contact details to the specified selector
-	* @param {jQuery} selector - The element to append the contacts to
-	*
-	* TODO: Look for a way to iterate through all of the properties inside the
-	* bio.contacts object -- it would need to match the expected items, but
-	* would also need to handle any additional contacts (e.g., LinkedIn).
-	*/
+	 * @description Appends the resume's contact details to the specified selector
+	 * @param {jQuery} selector - The element to append the contacts to
+	 *
+	 * TODO: Look for a way to iterate through all of the properties inside the
+	 * bio.contacts object -- it would need to match the expected items, but
+	 * would also need to handle any additional contacts (e.g., LinkedIn).
+	 */
 	displayContacts: function(selector) {
 		selector.append(bio.format(HTMLmobile, bio.contacts.mobile));
 		selector.append(bio.format(HTMLemail, bio.contacts.email));
@@ -45,8 +45,8 @@ var bio = {
 	},
 
 	/**
-	* @description Publishes all of the bio content to the page
-	*/
+	 * @description Publishes all of the bio content to the page
+	 */
 	display: function() {
 		$('#header').prepend(bio.format(HTMLheaderRole, bio.role));
 		$('#header').prepend(bio.format(HTMLheaderName, bio.name));
@@ -70,15 +70,14 @@ var bio = {
 };
 
 var work = {
-	jobs: [
-		{
+	jobs: [{
 			employer: 'Jan Barham MLC, Parliament of NSW',
 			title: 'Policy and Legislation Advisor',
 			location: 'Sydney, NSW, Australia',
 			dates: '2012-2017',
 			description: 'Policy research and analysis, stakeholder consultation, ' +
-			'creating and production of content for digital, print and media ' +
-			'campaigns, and writing speeches, articles and public communications.'
+				'creating and production of content for digital, print and media ' +
+				'campaigns, and writing speeches, articles and public communications.'
 		},
 		{
 			employer: 'Charles Sturt University',
@@ -86,9 +85,9 @@ var work = {
 			location: 'Bathurst, NSW, Australia',
 			dates: '2006-2012',
 			description: 'Conducted and supervised experimental, survey and diary ' +
-			'research. Coordinated fourth-year courses, implemented an online ' +
-			'research participation system, and delivered workshops on advanced ' +
-			'topics in research.'
+				'research. Coordinated fourth-year courses, implemented an online ' +
+				'research participation system, and delivered workshops on advanced ' +
+				'topics in research.'
 		},
 		{
 			employer: 'Charles Sturt University',
@@ -96,25 +95,25 @@ var work = {
 			location: 'Bathurst, NSW, Australia',
 			dates: '2002-2005',
 			description: 'Conducted and supervised survey and experimental research, ' +
-			'taught on-campus and distance education subjects, and contributed to ' +
-			'school administration and academic leadership.'
+				'taught on-campus and distance education subjects, and contributed to ' +
+				'school administration and academic leadership.'
 		}
 	],
 
 	/**
-	* @description Inserts content into the relevant HTML template
-	* @param {string} template - The HTML template (see helper.js)
-	* @param {string} content - The content to insert in place of the template's %data%
-	* @returns {string} HTML-formatted content
-	*/
+	 * @description Inserts content into the relevant HTML template
+	 * @param {string} template - The HTML template (see helper.js)
+	 * @param {string} content - The content to insert in place of the template's %data%
+	 * @returns {string} HTML-formatted content
+	 */
 	format: function(template, content) {
 		var output = template.replace('%data%', content);
 		return output;
 	},
 
 	/**
-	* @description Publishes all of the work experience content to the page
-	*/
+	 * @description Publishes all of the work experience content to the page
+	 */
 	display: function() {
 		work.jobs.forEach(function(job) {
 			$('#workExperience').append(HTMLworkStart);
@@ -133,13 +132,12 @@ var work = {
 };
 
 var projects = {
-	projects: [
-		{
+	projects: [{
 			title: 'Animal Trading Cards',
 			dates: '2017',
 			description: 'In this project for a web development course, I generated ' +
-			'content and used HTML5 and CSS to create a card-based layout to present ' +
-			'it in line with a supplied mockup.',
+				'content and used HTML5 and CSS to create a card-based layout to present ' +
+				'it in line with a supplied mockup.',
 			images: [
 				'images/animal-trading-cards.jpg'
 			],
@@ -149,7 +147,7 @@ var projects = {
 			title: 'Mockup to Article',
 			dates: '2017',
 			description: 'In this project for a web development course, I used ' +
-			'HTML5 to create a web page that matched the supplied mockup.',
+				'HTML5 to create a web page that matched the supplied mockup.',
 			images: [
 				'images/mockup-to-article.jpg'
 			],
@@ -159,9 +157,9 @@ var projects = {
 			title: 'OCC Bin Check-In',
 			dates: '2017',
 			description: 'In this project for a User Experience Design course, I ' +
-			'conducted interviews and other research, then developed and evaluated ' +
-			'low- and high-fidelity prototypes for a mobile website to address user ' +
-			'needs.',
+				'conducted interviews and other research, then developed and evaluated ' +
+				'low- and high-fidelity prototypes for a mobile website to address user ' +
+				'needs.',
 			images: [
 				'images/occ-bin-check-in.jpg'
 			],
@@ -171,7 +169,7 @@ var projects = {
 			title: 'Saving Our Forests',
 			dates: '2016-2017',
 			description: 'I developed a WordPress child theme, established the ' +
-			'information architecture, and produced content.',
+				'information architecture, and produced content.',
 			images: [
 				'images/saving-our-forests.jpg'
 			],
@@ -181,8 +179,8 @@ var projects = {
 			title: 'Climate Action NSW',
 			dates: '2015-2016',
 			description: 'I developed a WordPress child theme, established the ' +
-			'information architecture, and produced content and functionality to ' +
-			'meet campaign objectives.',
+				'information architecture, and produced content and functionality to ' +
+				'meet campaign objectives.',
 			images: [
 				'images/climate-action-nsw.jpg'
 			],
@@ -192,8 +190,8 @@ var projects = {
 			title: 'Fund Our Libraries',
 			dates: '2014-2015',
 			description: 'I implemented a WordPress child-parent theme combination, ' +
-			'established the information architecture, and produced content and ' +
-			'functionality to meet the campaign objectives.',
+				'established the information architecture, and produced content and ' +
+				'functionality to meet the campaign objectives.',
 			images: [
 				'images/fund-our-libraries.jpg'
 			],
@@ -202,19 +200,19 @@ var projects = {
 	],
 
 	/**
-	* @description Inserts content into the relevant HTML template
-	* @param {string} template - The HTML template (see helper.js)
-	* @param {string} content - The content to insert in place of the template's %data%
-	* @returns {string} HTML-formatted content
-	*/
+	 * @description Inserts content into the relevant HTML template
+	 * @param {string} template - The HTML template (see helper.js)
+	 * @param {string} content - The content to insert in place of the template's %data%
+	 * @returns {string} HTML-formatted content
+	 */
 	format: function(template, content) {
 		var output = template.replace('%data%', content);
 		return output;
 	},
 
 	/**
-	* @description Publishes all of the content about projects to the page
-	*/
+	 * @description Publishes all of the content about projects to the page
+	 */
 	display: function() {
 		projects.projects.forEach(function(project) {
 			$('#projects').append(HTMLprojectStart);
@@ -237,8 +235,7 @@ var projects = {
 };
 
 var education = {
-	schools: [
-		{
+	schools: [{
 			name: 'University of New England',
 			location: 'Armidale, NSW, Australia',
 			degree: 'Graduate Diploma of Legal Studies',
@@ -269,8 +266,7 @@ var education = {
 			url: 'https://www.unsw.edu.au/'
 		}
 	],
-	onlineCourses: [
-		{
+	onlineCourses: [{
 			title: 'Front-End Web Developer Nanodegree',
 			school: 'Udacity',
 			dates: '2017 (in progress)',
@@ -285,19 +281,19 @@ var education = {
 	],
 
 	/**
-	* @description Inserts content into the relevant HTML template
-	* @param {string} template - The HTML template (see helper.js)
-	* @param {string} content - The content to insert in place of the template's %data%
-	* @returns {string} HTML-formatted content
-	*/
+	 * @description Inserts content into the relevant HTML template
+	 * @param {string} template - The HTML template (see helper.js)
+	 * @param {string} content - The content to insert in place of the template's %data%
+	 * @returns {string} HTML-formatted content
+	 */
 	format: function(template, content) {
 		var output = template.replace('%data%', content);
 		return output;
 	},
 
 	/**
-	* @description Publishes all of the education content to the page
-	*/
+	 * @description Publishes all of the education content to the page
+	 */
 	display: function() {
 		education.schools.forEach(function(school) {
 			$('#education').append(HTMLschoolStart);
